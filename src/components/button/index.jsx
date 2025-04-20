@@ -1,34 +1,17 @@
-export const Button = ({label, variant, onClick}) => {
+import styles from './Button.module.css';
+import classNames from 'classnames';
 
-  const commonStyles = {
-    padding: '20px 32px 20px 32px',
-    borderRadius: '4px',
-    fontFamily: 'Comfortaa, sans-serif',
-  };
-  
-  let customStyles = {};
-if (variant === 'primary') {
-  customStyles = {
-    background: '#605DEC',
-    border: '1px solid #605DEC',
-    color: '#FFFFFF'
-  }
-} else if (variant === 'secondary') {
-  customStyles = {
-    background: 'transparent',
-    border: '1px solid #605DEC',
-    color: '#605DEC'
-  }
-} else if (variant === 'tertiary') {
-  customStyles = {
-    background: 'transparent',
-    color: '#605DEC'
-  }
-}
-
-  return(
-  <button style={{...commonStyles, ...customStyles}} onClick={onClick}>
-    {label}
-  </button>
+export const Button = ({label, variant, onClick, disabled = false}) => {
+  return (
+    <button className={classNames({
+      [styles.button]: true,
+      [styles.primary]: variant === 'primary',
+      [styles.secondary]: variant === 'secondary',
+      [styles.tertiary]: variant === 'tertiary',
+      [styles.disabled]: disabled,
+    })} onClick={onClick}
+    >
+        {label}
+    </button>
   )
 }
