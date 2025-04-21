@@ -10,12 +10,12 @@ const CheckboxIcon = () => {
 }
 
 
-export const Checkbox = ({label, checked, disabled = false, error = false}) => {
+export const Checkbox = ({label, checked, disabled = false, error = false, onChange }) => {
     
   console.log(styles);
   
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} onClick={() => onChange(!checked)}>
       <div className={classNames({
         [styles.checkbox]: true,
         [styles.activeBorder]: checked,

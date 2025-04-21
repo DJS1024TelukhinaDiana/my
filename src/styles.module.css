@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .lightTheme {
+    height: 100%;
+    --background-color: #c3c3c3;
+    --button-background-color: #2e2e2e;
+    --button-label-color: #c3c3c3;
+  }
+  
+  .darkTheme {
+    height: 100%;
+    --background-color: #2e2e2e;
+    --button-background-color: #c3c3c3;
+    --button-label-color: #2e2e2e;
+  }
+
+  body {
+    height: 100vh;
+  } 
+  
+  .main {
+    height: 100%;
+    padding: 20px;
+    background: var(--background-color);
+  }

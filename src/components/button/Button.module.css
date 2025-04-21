@@ -1,14 +1,16 @@
 .button {
     padding: 20px 32px 20px 32px;
     border-radius: 4px;
-    font-family: Comfortaa, sans-serif;
+    font-family: Shantell Sans, cursive;
     cursor: pointer;
   }
 
   .primary {
-    background: #605DEC;
-    border: 1px solid #605DEC;
-    color: #FFFFFF;
+    background: var(--button-background-color);
+    color: var(--button-label-color);
+    border: 1px solid var(--button-background-color);
+    /* color: #FFFFFF; */
+  
 
     &:hover {
         background: #3D3ACE;
@@ -21,8 +23,8 @@
       &:active {
         background: #23209F;
       }
-  }
-
+    }
+    
   .secondary {
     background: transparent;
     border: 1px solid #605DEC;
